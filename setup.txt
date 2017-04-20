@@ -30,3 +30,20 @@ host github.com
  IdentityFile ~/.ssh/id_rsa_github
  User git
 
+
+#install chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+
+
+#for python development environments
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"'>>~/.bashrc
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
