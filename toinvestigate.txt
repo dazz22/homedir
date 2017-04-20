@@ -1,0 +1,25 @@
+darren@darren-To-be-filled-by-O-E-M:~$ git clean -f
+Removing .ICEauthority
+Removing .Xauthority
+Removing .bash_logout
+Removing .dmrc
+Removing .gitconfig
+Removing .gitignore
+Removing .inputrc
+Removing .profile
+Removing .pulse-cookie
+Removing .python_history
+Removing .steampath
+Removing .steampid
+Removing .sudo_as_admin_successful
+Removing .viminfo
+Removing .wget-hsts
+Removing .xsession-errors
+Removing .xsession-errors.old
+Removing 10,000.txt
+Removing discord-canary.deb
+Removing examples.desktop
+Removing ips.txt
+Removing test.sh
+Removing ts.sh
+
