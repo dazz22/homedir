@@ -23,3 +23,12 @@ Removing ips.txt
 Removing test.sh
 Removing ts.sh
 
+#25/04/2017
+#used to convert simplified to traditional characters
+sudo apt-get install opencc
+#script to conver mdb files to mysql
+#https://gist.github.com/mywarr/9908044
+sudo apt-get install mdbtools
+#python AccessDump.py /home/darren/chinese_wordnet/cwn_sqllite3.mdb >>execute.txt
+#opencc -i execute.txt -o execute_simplified.txt -c zht2zhs.ini
+
