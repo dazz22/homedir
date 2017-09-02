@@ -44,6 +44,12 @@ function setuppythondev()
     . $HOME/.bash_profile
     git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 }
+
+function setupvimplugins()
+{
+    git remote add origin master git@github.com:dazz22/homedir.git
+    git submodule update --init
+}
 #####################BEGIN SCRIPT###########################
 #validate username and email
 if [ "${#1}" -gt 0 ] && [ "${#2}" -gt 0 ] ; then
@@ -74,4 +80,5 @@ mv ~/homedir/.v* ~/
 mv ~/homedir/.b* ~/
 mv ~/homedir/.g* ~/
 mv ~/homedir/.i* ~/
+setupvimplugins
 setuppythondev
