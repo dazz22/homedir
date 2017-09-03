@@ -34,11 +34,17 @@ function setupgithub()
 
 function setuppythondev()
 {
-    sudo apt-get update
+    sudo apt-get update > /dev/null
     sudo apt-get install -y vim-nox > /dev/null
     sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 	libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 	xz-utils tk-dev > /dev/null
+    #repeated this step as the first try is unsuccesful, need to investigate
+    sudo apt-get update > /dev/null
+    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+	libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+	xz-utils tk-dev > /dev/null
+
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     . $HOME/.profile
     . $HOME/.bash_profile
@@ -47,9 +53,6 @@ function setuppythondev()
 
 function setupvimplugins()
 {
-    cd ~
-    git init
-    git remote add origin master git@github.com:dazz22/homedir.git
     git submodule update --init
 }
 #####################BEGIN SCRIPT###########################
