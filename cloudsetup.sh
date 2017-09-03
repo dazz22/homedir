@@ -47,6 +47,8 @@ function setuppythondev()
 
 function setupvimplugins()
 {
+    cd ~
+    git init
     git remote add origin master git@github.com:dazz22/homedir.git
     git submodule update --init
 }
